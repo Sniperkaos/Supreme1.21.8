@@ -22,63 +22,63 @@ public class SupremeQuarry {
       "139ac257f4e04adc6ab3e46fd3b28749e866faa9ce6a1d6d526e0e3864d9222", "&eStone Quarry", "",
       LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), UtilEnergy.energyPowerPerItem(20),
       UtilEnergy.energyBuffer(10000), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_STONE_QUARRY = new ItemStack[]{SupremeComponents.ADAMANTIUM_PLATE.asOne(),
-      SupremeComponents.INDUCTIVE_MACHINE.asOne(), SupremeComponents.ADAMANTIUM_PLATE.asOne(), new ItemStack(Material.DIAMOND_PICKAXE),
-      SlimefunItems.PROGRAMMABLE_ANDROID_MINER.asOne(), new ItemStack(Material.DIAMOND_PICKAXE),
-      SupremeComponents.ADAMANTIUM_PLATE.asOne(), SlimefunItems.COAL_GENERATOR.asOne(), SupremeComponents.ADAMANTIUM_PLATE.asOne()};
+  public static final ItemStack[] RECIPE_STONE_QUARRY = new ItemStack[]{SupremeComponents.ADAMANTIUM_PLATE.item(),
+      SupremeComponents.INDUCTIVE_MACHINE.item(), SupremeComponents.ADAMANTIUM_PLATE.item(), new ItemStack(Material.DIAMOND_PICKAXE),
+      SlimefunItems.PROGRAMMABLE_ANDROID_MINER.item(), new ItemStack(Material.DIAMOND_PICKAXE),
+      SupremeComponents.ADAMANTIUM_PLATE.item(), SlimefunItems.COAL_GENERATOR.item(), SupremeComponents.ADAMANTIUM_PLATE.item()};
 
   public static final SlimefunItemStack COAL_QUARRY = new SupremeItemStack("SUPREME_COAL_QUARRY",
       "579ee734b739c0d19546d5b4b049c01a055506cc00b0cfcbf177883d2c814c04", "&eCoal Quarry", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), UtilEnergy.energyPowerPerItem(20),
       UtilEnergy.energyBuffer(10000), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_COAL_QUARRY = new ItemStack[]{SupremeCetrus.CETRUS_IGNIS.asOne(),
-      SupremeComponents.ALLOY_PLATINUM.asOne(), SupremeCetrus.CETRUS_IGNIS.asOne(), new ItemStack(Material.DIAMOND_PICKAXE),
-      SupremeQuarry.STONE_QUARRY.asOne(), new ItemStack(Material.DIAMOND_PICKAXE), SlimefunItems.COAL_GENERATOR.asOne(),
-      SlimefunItems.GEO_MINER.asOne(), SlimefunItems.LARGE_CAPACITOR.asOne()};
+  public static final ItemStack[] RECIPE_COAL_QUARRY = new ItemStack[]{SupremeCetrus.CETRUS_IGNIS.item(),
+      SupremeComponents.ALLOY_PLATINUM.item(), SupremeCetrus.CETRUS_IGNIS.item(), new ItemStack(Material.DIAMOND_PICKAXE),
+      SupremeQuarry.STONE_QUARRY.item(), new ItemStack(Material.DIAMOND_PICKAXE), SlimefunItems.COAL_GENERATOR.item(),
+      SlimefunItems.GEO_MINER.item(), SlimefunItems.LARGE_CAPACITOR.item()};
 
   public static final SlimefunItemStack IRON_QUARRY = new SupremeItemStack("SUPREME_IRON_QUARRY",
       "f8eecae423359d3f5efd1063a9a7bcfaa43839d75d3b223c808df7961dd173d0", "&eIron Quarry", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), UtilEnergy.energyPowerPerItem(20),
       UtilEnergy.energyBuffer(10000), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_IRON_QUARRY = new ItemStack[]{SupremeCetrus.CETRUS_VENTUS.asOne(),
-      SupremeComponents.ALLOY_IRIDIUM.asOne(), SupremeCetrus.CETRUS_VENTUS.asOne(), SupremeComponents.STAINLESS_MACHINE.asOne(),
-      SupremeQuarry.COAL_QUARRY.asOne(), SupremeComponents.STAINLESS_MACHINE.asOne(), SlimefunItems.ELECTRO_MAGNET.asOne(),
-      SlimefunItems.IRON_GOLEM_ASSEMBLER.asOne(), SlimefunItems.ELECTRO_MAGNET.asOne()};
+  public static final ItemStack[] RECIPE_IRON_QUARRY = new ItemStack[]{SupremeCetrus.CETRUS_VENTUS.item(),
+      SupremeComponents.ALLOY_IRIDIUM.item(), SupremeCetrus.CETRUS_VENTUS.item(), SupremeComponents.STAINLESS_MACHINE.item(),
+      SupremeQuarry.COAL_QUARRY.item(), SupremeComponents.STAINLESS_MACHINE.item(), SlimefunItems.ELECTRO_MAGNET.item(),
+      SlimefunItems.IRON_GOLEM_ASSEMBLER.item(), SlimefunItems.ELECTRO_MAGNET.item()};
 
   public static final SlimefunItemStack GOLD_QUARRY = new SupremeItemStack("SUPREME_GOLD_QUARRY",
       "6c07d48fd8764bc8d01a10cc6426578862090d9e856f3a8dd7f974a7521efc43", "&eGold Quarry", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), UtilEnergy.energyPowerPerItem(20),
       UtilEnergy.energyBuffer(10000), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_GOLD_QUARRY = new ItemStack[]{SupremeCetrus.CETRUS_LUX.asOne(),
-      SupremeComponents.ALLOY_AURUM.asOne(), SupremeCetrus.CETRUS_LUX.asOne(), SupremeComponents.CONVEYANCE_MACHINE.asOne(),
-      SupremeQuarry.IRON_QUARRY.asOne(), SupremeComponents.CONVEYANCE_MACHINE.asOne(), SlimefunItems.ELECTRO_MAGNET.asOne(),
-      SlimefunItems.ELECTRIC_SMELTERY.asOne(), SlimefunItems.ELECTRO_MAGNET.asOne()};
+  public static final ItemStack[] RECIPE_GOLD_QUARRY = new ItemStack[]{SupremeCetrus.CETRUS_LUX.item(),
+      SupremeComponents.ALLOY_AURUM.item(), SupremeCetrus.CETRUS_LUX.item(), SupremeComponents.CONVEYANCE_MACHINE.item(),
+      SupremeQuarry.IRON_QUARRY.item(), SupremeComponents.CONVEYANCE_MACHINE.item(), SlimefunItems.ELECTRO_MAGNET.item(),
+      SlimefunItems.ELECTRIC_SMELTERY.item(), SlimefunItems.ELECTRO_MAGNET.item()};
 
   public static final SlimefunItemStack DIAMOND_QUARRY = new SupremeItemStack("SUPREME_DIAMOND_QUARRY",
       "666070ce03a545ee4d263bcf27f36338d249d7cb7a2376f92c1673ae134e04b6", "&eDiamond Quarry", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), UtilEnergy.energyPowerPerItem(10),
       UtilEnergy.energyBuffer(1000), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_DIAMOND_QUARRY = new ItemStack[]{SupremeCetrus.CETRUS_AQUA.asOne(),
-      SupremeComponents.ALLOY_TITANIUM.asOne(), SupremeCetrus.CETRUS_AQUA.asOne(), SupremeComponents.INDUCTOR_MACHINE.asOne(),
-      SupremeQuarry.GOLD_QUARRY.asOne(), SupremeComponents.INDUCTOR_MACHINE.asOne(), SlimefunItems.ELECTRIC_MOTOR.asOne(),
-      SlimefunItems.HEATED_PRESSURE_CHAMBER.asOne(), SlimefunItems.ELECTRIC_MOTOR.asOne()};
+  public static final ItemStack[] RECIPE_DIAMOND_QUARRY = new ItemStack[]{SupremeCetrus.CETRUS_AQUA.item(),
+      SupremeComponents.ALLOY_TITANIUM.item(), SupremeCetrus.CETRUS_AQUA.item(), SupremeComponents.INDUCTOR_MACHINE.item(),
+      SupremeQuarry.GOLD_QUARRY.item(), SupremeComponents.INDUCTOR_MACHINE.item(), SlimefunItems.ELECTRIC_MOTOR.item(),
+      SlimefunItems.HEATED_PRESSURE_CHAMBER.item(), SlimefunItems.ELECTRIC_MOTOR.item()};
 
   public static final SlimefunItemStack THORNIUM_QUARRY = new SupremeItemStack("SUPREME_THORNIUM_QUARRY",
       "6ddd4a12da1cc2c9f9d6cd49fc778e3a11f3757de6dd312d70a0d47885189c0", "&eThornium Quarry", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), UtilEnergy.energyPowerPerItem(10),
       UtilEnergy.energyBuffer(1000), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_THORNIUM_QUARRY = new ItemStack[]{SupremeCetrus.CETRUS_LUMIUM.asOne(),
-      SupremeComponents.ALLOY_ADAMANTIUM.asOne(), SupremeCetrus.CETRUS_LUMIUM.asOne(), SupremeComponents.CRYSTALLIZER_MACHINE.asOne(),
-      SupremeQuarry.DIAMOND_QUARRY.asOne(), SupremeComponents.CRYSTALLIZER_MACHINE.asOne(), SlimefunItems.ELECTRIC_MOTOR.asOne(),
-      SlimefunItems.WITHER_ASSEMBLER.asOne(), SlimefunItems.ELECTRIC_MOTOR.asOne()};
+  public static final ItemStack[] RECIPE_THORNIUM_QUARRY = new ItemStack[]{SupremeCetrus.CETRUS_LUMIUM.item(),
+      SupremeComponents.ALLOY_ADAMANTIUM.item(), SupremeCetrus.CETRUS_LUMIUM.item(), SupremeComponents.CRYSTALLIZER_MACHINE.item(),
+      SupremeQuarry.DIAMOND_QUARRY.item(), SupremeComponents.CRYSTALLIZER_MACHINE.item(), SlimefunItems.ELECTRIC_MOTOR.item(),
+      SlimefunItems.WITHER_ASSEMBLER.item(), SlimefunItems.ELECTRIC_MOTOR.item()};
 
   public static final SlimefunItemStack SUPREME_NUGGETS_QUARRY = new SupremeItemStack("SUPREME_SUPREME_NUGGETS_QUARRY",
       "ec7007d16abcfac9c6830c74d37cfd439a26373457d91452c1a96b8e04a6d", "&eNuggets of Supreme Quarry", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), UtilEnergy.energyPowerPerItem(10),
       UtilEnergy.energyBuffer(1000), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_SUPREME_NUGGETS_QUARRY = new ItemStack[]{SupremeCetrus.CETRUS_LUMIUM.asOne(),
-      SupremeComponents.THORNERITE.asOne(), SupremeCetrus.CETRUS_LUMIUM.asOne(), SupremeCore.CORE_OF_NATURE.asOne(),
-      SupremeQuarry.THORNIUM_QUARRY.asOne(), SupremeCore.CORE_OF_BLOCK.asOne(), SupremeCore.CORE_OF_LIFE.asOne(), SlimefunItems.NUCLEAR_REACTOR.asOne(),
-      SupremeCore.CORE_OF_DEATH.asOne()};
+  public static final ItemStack[] RECIPE_SUPREME_NUGGETS_QUARRY = new ItemStack[]{SupremeCetrus.CETRUS_LUMIUM.item(),
+      SupremeComponents.THORNERITE.item(), SupremeCetrus.CETRUS_LUMIUM.item(), SupremeCore.CORE_OF_NATURE.item(),
+      SupremeQuarry.THORNIUM_QUARRY.item(), SupremeCore.CORE_OF_BLOCK.item(), SupremeCore.CORE_OF_LIFE.item(), SlimefunItems.NUCLEAR_REACTOR.item(),
+      SupremeCore.CORE_OF_DEATH.item()};
 
 }

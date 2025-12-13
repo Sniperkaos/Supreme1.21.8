@@ -68,6 +68,10 @@ public class VirtualGardenMachineRecipe extends MachineRecipe {
       null, Material.JUNGLE_LOG, Material.JUNGLE_LEAVES);
   public static final AbstractItemRecipe RECIPE_GARDEN_BIRCH_SAPLING = new AbstractItemRecipe(Material.BIRCH_SAPLING,
       null, Material.BIRCH_LOG, Material.BIRCH_LEAVES);
+  public static final AbstractItemRecipe RECIPE_GARDEN_PALE_OAK = new AbstractItemRecipe(Material.PALE_OAK_SAPLING,
+	      null, Material.PALE_OAK_LOG, Material.PALE_OAK_LEAVES);
+  public static final AbstractItemRecipe RECIPE_GARDEN_CHERRY = new AbstractItemRecipe(Material.CHERRY_SAPLING,
+	      null, Material.CHERRY_LOG, Material.CHERRY_LEAVES);
   public static final AbstractItemRecipe RECIPE_GARDEN_SPRUCE_SAPLING = new AbstractItemRecipe(Material.SPRUCE_SAPLING,
       null, Material.SPRUCE_LOG, Material.SPRUCE_LEAVES);
   public static final AbstractItemRecipe RECIPE_GARDEN_ACACIA_SAPLING = new AbstractItemRecipe(Material.ACACIA_SAPLING,
@@ -96,7 +100,15 @@ public class VirtualGardenMachineRecipe extends MachineRecipe {
       Material.DIORITE);
   public static final AbstractItemRecipe RECIPE_GARDEN_ANDESITE = new AbstractItemRecipe(Material.POLISHED_ANDESITE,
       Material.ANDESITE);
+  public static final AbstractItemRecipe RECIPE_GARDEN_RED_MUSHROOM = new AbstractItemRecipe(Material.RED_MUSHROOM_BLOCK, Material.RED_MUSHROOM);
+  
+  public static final AbstractItemRecipe RECIPE_GARDEN_MUSHROOM = new AbstractItemRecipe(Material.BROWN_MUSHROOM_BLOCK, Material.BROWN_MUSHROOM);
 
+  public static final AbstractItemRecipe RECIPE_GARDEN_AZALEA = new AbstractItemRecipe(Material.AZALEA, Material.AZALEA_LEAVES);
+
+  public static final AbstractItemRecipe RECIPE_GARDEN_AZALEA_FLOWER = new AbstractItemRecipe(Material.FLOWERING_AZALEA, Material.FLOWERING_AZALEA_LEAVES);
+
+		  
   @ParametersAreNonnullByDefault
   public VirtualGardenMachineRecipe(AbstractItemRecipe recipe) {
     super(Supreme.getSupremeOptions().getBaseTimeVirtualGarden(), recipe.getInput(), recipe.getOutput());
@@ -104,6 +116,12 @@ public class VirtualGardenMachineRecipe extends MachineRecipe {
 
   public static List<AbstractItemRecipe> getAllRecipe() {
     List<AbstractItemRecipe> list = new ArrayList<>();
+    list.add(RECIPE_GARDEN_RED_MUSHROOM);
+    list.add(RECIPE_GARDEN_AZALEA);
+    list.add(RECIPE_GARDEN_AZALEA_FLOWER);
+    list.add(RECIPE_GARDEN_MUSHROOM);
+    list.add(RECIPE_GARDEN_PALE_OAK);
+    list.add(RECIPE_GARDEN_CHERRY);
     list.add(RECIPE_GARDEN_WHITE_DYE);
     list.add(RECIPE_GARDEN_ORANGE_DYE);
     list.add(RECIPE_GARDEN_MAGENTA_DYE);

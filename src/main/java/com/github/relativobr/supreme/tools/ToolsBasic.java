@@ -12,51 +12,51 @@ public final class ToolsBasic {
 
   public static final SlimefunItemStack ADAMANTIUM_AXE = new SupremeItemStack("SUPREME_ADAMANTIUM_AXE",
       Material.DIAMOND_AXE);
-  public static final ItemStack[] RECIPE_ADAMANTIUM_AXE = {SupremeComponents.ADAMANTIUM_PLATE.asOne(),
-      SupremeComponents.ADAMANTIUM_PLATE.asOne(), null, SupremeComponents.ADAMANTIUM_PLATE.asOne(), new ItemStack(Material.STICK), null,
+  public static final ItemStack[] RECIPE_ADAMANTIUM_AXE = {SupremeComponents.ADAMANTIUM_PLATE.item(),
+      SupremeComponents.ADAMANTIUM_PLATE.item(), null, SupremeComponents.ADAMANTIUM_PLATE.item(), new ItemStack(Material.STICK), null,
       null, new ItemStack(Material.STICK), null};
 
   public static final SlimefunItemStack AURUM_AXE = new SupremeItemStack("SUPREME_AURUM_AXE", Material.DIAMOND_AXE);
-  public static final ItemStack[] RECIPE_AURUM_AXE = {SupremeComponents.AURUM_PLATE.asOne(), SupremeComponents.AURUM_PLATE.asOne(),
-      null, SupremeComponents.AURUM_PLATE.asOne(), new ItemStack(Material.STICK), null, null, new ItemStack(Material.STICK),
+  public static final ItemStack[] RECIPE_AURUM_AXE = {SupremeComponents.AURUM_PLATE.item(), SupremeComponents.AURUM_PLATE.item(),
+      null, SupremeComponents.AURUM_PLATE.item(), new ItemStack(Material.STICK), null, null, new ItemStack(Material.STICK),
       null};
 
   public static final SlimefunItemStack TITANIUM_AXE = new SupremeItemStack("SUPREME_TITANIUM_AXE",
       Material.DIAMOND_AXE);
-  public static final ItemStack[] RECIPE_TITANIUM_AXE = {SupremeComponents.TITANIUM_PLATE.asOne(),
-      SupremeComponents.TITANIUM_PLATE.asOne(), null, SupremeComponents.TITANIUM_PLATE.asOne(), new ItemStack(Material.STICK), null,
+  public static final ItemStack[] RECIPE_TITANIUM_AXE = {SupremeComponents.TITANIUM_PLATE.item(),
+      SupremeComponents.TITANIUM_PLATE.item(), null, SupremeComponents.TITANIUM_PLATE.item(), new ItemStack(Material.STICK), null,
       null, new ItemStack(Material.STICK), null};
 
   public static final SlimefunItemStack ADAMANTIUM_PICKAXE = new SupremeItemStack("SUPREME_ADAMANTIUM_PICKAXE",
       Material.DIAMOND_PICKAXE);
-  public static final ItemStack[] RECIPE_ADAMANTIUM_PICKAXE = {SupremeComponents.ADAMANTIUM_PLATE.asOne(),
-      SupremeComponents.ADAMANTIUM_PLATE.asOne(), SupremeComponents.ADAMANTIUM_PLATE.asOne(), null, new ItemStack(Material.STICK), null,
+  public static final ItemStack[] RECIPE_ADAMANTIUM_PICKAXE = {SupremeComponents.ADAMANTIUM_PLATE.item(),
+      SupremeComponents.ADAMANTIUM_PLATE.item(), SupremeComponents.ADAMANTIUM_PLATE.item(), null, new ItemStack(Material.STICK), null,
       null, new ItemStack(Material.STICK), null};
 
   public static final SlimefunItemStack AURUM_PICKAXE = new SupremeItemStack("SUPREME_AURUM_PICKAXE",
       Material.DIAMOND_PICKAXE);
-  public static final ItemStack[] RECIPE_AURUM_PICKAXE = {SupremeComponents.AURUM_PLATE.asOne(), SupremeComponents.AURUM_PLATE.asOne(),
-      SupremeComponents.AURUM_PLATE.asOne(), null, new ItemStack(Material.STICK), null, null, new ItemStack(Material.STICK),
+  public static final ItemStack[] RECIPE_AURUM_PICKAXE = {SupremeComponents.AURUM_PLATE.item(), SupremeComponents.AURUM_PLATE.item(),
+      SupremeComponents.AURUM_PLATE.item(), null, new ItemStack(Material.STICK), null, null, new ItemStack(Material.STICK),
       null};
 
   public static final SlimefunItemStack TITANIUM_PICKAXE = new SupremeItemStack("SUPREME_TITANIUM_PICKAXE",
       Material.DIAMOND_PICKAXE);
-  public static final ItemStack[] RECIPE_TITANIUM_PICKAXE = {SupremeComponents.TITANIUM_PLATE.asOne(),
-      SupremeComponents.TITANIUM_PLATE.asOne(), SupremeComponents.TITANIUM_PLATE.asOne(), null, new ItemStack(Material.STICK), null,
+  public static final ItemStack[] RECIPE_TITANIUM_PICKAXE = {SupremeComponents.TITANIUM_PLATE.item(),
+      SupremeComponents.TITANIUM_PLATE.item(), SupremeComponents.TITANIUM_PLATE.item(), null, new ItemStack(Material.STICK), null,
       null, new ItemStack(Material.STICK), null};
 
   public static final SlimefunItemStack ADAMANTIUM_SHOVEL = new SupremeItemStack("SUPREME_ADAMANTIUM_SHOVEL",
       Material.DIAMOND_SHOVEL);
-  public static final ItemStack[] RECIPE_ADAMANTIUM_SHOVEL = {null, SupremeComponents.ADAMANTIUM_PLATE.asOne(), null, null,
+  public static final ItemStack[] RECIPE_ADAMANTIUM_SHOVEL = {null, SupremeComponents.ADAMANTIUM_PLATE.item(), null, null,
       new ItemStack(Material.STICK), null, null, new ItemStack(Material.STICK), null};
 
   public static final SlimefunItemStack AURUM_SHOVEL = new SupremeItemStack("SUPREME_AURUM_SHOVEL",
       Material.DIAMOND_SHOVEL);
-  public static final ItemStack[] RECIPE_AURUM_SHOVEL = {null, SupremeComponents.AURUM_PLATE.asOne(), null, null,
+  public static final ItemStack[] RECIPE_AURUM_SHOVEL = {null, SupremeComponents.AURUM_PLATE.item(), null, null,
       new ItemStack(Material.STICK), null, null, new ItemStack(Material.STICK), null};
 
   public static final SlimefunItemStack TITANIUM_SHOVEL = new SupremeItemStack("SUPREME_TITANIUM_SHOVEL",
       Material.DIAMOND_SHOVEL);
-  public static final ItemStack[] RECIPE_TITANIUM_SHOVEL = {null, SupremeComponents.TITANIUM_PLATE.asOne(), null, null,
+  public static final ItemStack[] RECIPE_TITANIUM_SHOVEL = {null, SupremeComponents.TITANIUM_PLATE.item(), null, null,
       new ItemStack(Material.STICK), null, null, new ItemStack(Material.STICK), null};
 }

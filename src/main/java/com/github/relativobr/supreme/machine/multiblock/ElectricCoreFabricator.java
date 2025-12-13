@@ -33,10 +33,10 @@ public class ElectricCoreFabricator extends GenericMachine {
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(1),
       UtilEnergy.energyPowerPerSecond(20), "", "&3Supreme Machine");
 
-  public static final ItemStack[] RECIPE_ELECTRIC_CORE_MACHINE = new ItemStack[]{SupremeComponents.RUSTLESS_MACHINE.asOne(),
-      SlimefunItems.PROGRAMMABLE_ANDROID_3.asOne(), SupremeComponents.RUSTLESS_MACHINE.asOne(), SupremeComponents.INDUCTIVE_MACHINE.asOne(),
-      SupremeComponents.SYNTHETIC_RUBY.asOne(), SupremeComponents.INDUCTIVE_MACHINE.asOne(), SlimefunItems.ELECTRIC_MOTOR.asOne(),
-      SlimefunItems.CARBONADO_EDGED_CAPACITOR.asOne(), SlimefunItems.ELECTRIC_MOTOR.asOne()};
+  public static final ItemStack[] RECIPE_ELECTRIC_CORE_MACHINE = new ItemStack[]{SupremeComponents.RUSTLESS_MACHINE.item(),
+      SlimefunItems.PROGRAMMABLE_ANDROID_3.item(), SupremeComponents.RUSTLESS_MACHINE.item(), SupremeComponents.INDUCTIVE_MACHINE.item(),
+      SupremeComponents.SYNTHETIC_RUBY.item(), SupremeComponents.INDUCTIVE_MACHINE.item(), SlimefunItems.ELECTRIC_MOTOR.item(),
+      SlimefunItems.CARBONADO_EDGED_CAPACITOR.item(), SlimefunItems.ELECTRIC_MOTOR.item()};
 
   public static final SlimefunItemStack ELECTRIC_CORE_MACHINE_II = new SupremeItemStack("SUPREME_ELECTRIC_CORE_II",
       Material.SHROOMLIGHT, "&bElectric Core Machine II", "", "&fAdvanced craft resource of core", "",
@@ -44,20 +44,20 @@ public class ElectricCoreFabricator extends GenericMachine {
       UtilEnergy.energyPowerPerSecond(100), "", "&3Supreme Machine");
 
   public static final ItemStack[] RECIPE_ELECTRIC_CORE_MACHINE_II = new ItemStack[]{
-      SupremeComponents.CONVEYANCE_MACHINE.asOne(), SupremeCetrus.CETRUS_LUX.asOne(), SupremeComponents.CONVEYANCE_MACHINE.asOne(),
-      SupremeComponents.INDUCTOR_MACHINE.asOne(), ElectricCoreFabricator.ELECTRIC_CORE_MACHINE.asOne(),
-      SupremeComponents.INDUCTOR_MACHINE.asOne(), SupremeComponents.BLEND_MACHINE.asOne(), SupremeCetrus.CETRUS_IGNIS.asOne(),
-      SupremeComponents.BLEND_MACHINE.asOne()};
+      SupremeComponents.CONVEYANCE_MACHINE.item(), SupremeCetrus.CETRUS_LUX.item(), SupremeComponents.CONVEYANCE_MACHINE.item(),
+      SupremeComponents.INDUCTOR_MACHINE.item(), ElectricCoreFabricator.ELECTRIC_CORE_MACHINE.item(),
+      SupremeComponents.INDUCTOR_MACHINE.item(), SupremeComponents.BLEND_MACHINE.item(), SupremeCetrus.CETRUS_IGNIS.item(),
+      SupremeComponents.BLEND_MACHINE.item()};
 
   public static final SlimefunItemStack ELECTRIC_CORE_MACHINE_III = new SupremeItemStack("SUPREME_ELECTRIC_CORE_III",
       Material.SHROOMLIGHT, "&bElectric Core Machine III", "", "&fAdvanced craft resource of core", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(15),
       UtilEnergy.energyPowerPerSecond(300), "", "&3Supreme Machine");
 
-  public static final ItemStack[] RECIPE_ELECTRIC_CORE_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE.asOne(),
-      SupremeCetrus.CETRUS_LUX.asOne(), SupremeComponents.THORNERITE.asOne(), SupremeComponents.SUPREME.asOne(),
-      ElectricCoreFabricator.ELECTRIC_CORE_MACHINE_II.asOne(), SupremeComponents.SUPREME.asOne(),
-      SupremeComponents.CRYSTALLIZER_MACHINE.asOne(), SupremeCetrus.CETRUS_LUMIUM.asOne(), SupremeComponents.CRYSTALLIZER_MACHINE.asOne()};
+  public static final ItemStack[] RECIPE_ELECTRIC_CORE_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE.item(),
+      SupremeCetrus.CETRUS_LUX.item(), SupremeComponents.THORNERITE.item(), SupremeComponents.SUPREME.item(),
+      ElectricCoreFabricator.ELECTRIC_CORE_MACHINE_II.item(), SupremeComponents.SUPREME.item(),
+      SupremeComponents.CRYSTALLIZER_MACHINE.item(), SupremeCetrus.CETRUS_LUMIUM.item(), SupremeComponents.CRYSTALLIZER_MACHINE.item()};
 
   @ParametersAreNonnullByDefault
   public ElectricCoreFabricator(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
@@ -132,6 +132,6 @@ public class ElectricCoreFabricator extends GenericMachine {
         customCoreRecipe.getLastItem().getMaxStackSize());
     return new AbstractItemRecipe(
         new ItemStack[]{itemStack1, itemStack1, itemStack1, itemStack2, itemStack2, itemStack2, itemStack3, itemStack3,
-            itemStack3}, customCoreRecipe.getMaterial().asOne());
+            itemStack3}, customCoreRecipe.getMaterial().item());
   }
 }

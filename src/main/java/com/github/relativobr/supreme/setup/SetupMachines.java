@@ -11,6 +11,7 @@ import com.github.relativobr.supreme.machine.Foundry;
 import com.github.relativobr.supreme.machine.MagicAltar;
 import com.github.relativobr.supreme.machine.MobCollector;
 import com.github.relativobr.supreme.machine.VirtualAquarium;
+import com.github.relativobr.supreme.machine.VirtualCombiner;
 import com.github.relativobr.supreme.machine.VirtualGarden;
 import com.github.relativobr.supreme.machine.multiblock.ElectricCoreFabricator;
 import com.github.relativobr.supreme.machine.multiblock.ElectricGearFabricator;
@@ -215,6 +216,19 @@ public class SetupMachines {
         .setTimeProcess(baseTimeVirtualAquarium).setCapacity(15000)
         .setProcessingSpeed(15).setEnergyConsumption(300).register(sup);
 
+    new VirtualCombiner(ItemGroups.MACHINES_CATEGORY, VirtualCombiner.COMBINER_MACHINE,
+    		RecipeType.ENHANCED_CRAFTING_TABLE, VirtualCombiner.RECIPE_VIRTUAL_COMBINER_MACHINE)
+    	.setTimeProcess(baseTimeVirtualAquarium).setCapacity(10000)
+        .setProcessingSpeed(10).setEnergyConsumption(1000).register(sup);
+    new VirtualCombiner(ItemGroups.MACHINES_CATEGORY, VirtualCombiner.COMBINER_MACHINE_2,
+    		RecipeType.ENHANCED_CRAFTING_TABLE, VirtualCombiner.RECIPE_VIRTUAL_COMBINER_MACHINE_2)
+    	.setTimeProcess(baseTimeVirtualAquarium).setCapacity(10000)
+        .setProcessingSpeed(10).setEnergyConsumption(1000).register(sup);
+    new VirtualCombiner(ItemGroups.MACHINES_CATEGORY, VirtualCombiner.COMBINER_MACHINE_3,
+    		RecipeType.ENHANCED_CRAFTING_TABLE, VirtualCombiner.RECIPE_VIRTUAL_COMBINER_MACHINE_3)
+    	.setTimeProcess(baseTimeVirtualAquarium).setCapacity(10000)
+        .setProcessingSpeed(10).setEnergyConsumption(1000).register(sup);
+    
     SetupTechMachines.setup(sup);
 
     CheckInventory.setup(sup);

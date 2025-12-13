@@ -1,6 +1,9 @@
 package com.github.relativobr.supreme.machine.recipe;
 
 import com.github.relativobr.supreme.Supreme;
+
+import dev.cworldstar.utils.FormatUtils;
+import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +17,13 @@ public class VirtualAquariumMachineRecipe extends MachineRecipe {
   @ParametersAreNonnullByDefault
   public VirtualAquariumMachineRecipe(ItemStack input, ItemStack[] result) {
     super(Supreme.getSupremeOptions().getBaseTimeVirtualAquarium(), new ItemStack[]{input}, result);
+  }
+  
+  private static ItemStack createMagnetDisplay(ItemStack display, String name, int chance) {
+	    display.editMeta(meta -> {
+	    	meta.displayName(FormatUtils.mm("<white>Gives <red>" + name + "<white> at a " + Integer.toString(chance) + "% chance."));
+	    });
+	    return display;
   }
 
   public static List<ItemStack> getAllRecipe() {
@@ -72,6 +82,30 @@ public class VirtualAquariumMachineRecipe extends MachineRecipe {
     displayRecipes.add(new ItemStack(Material.STICK));
     displayRecipes.add(CustomItemStack.create(Material.GOLDEN_HOE, null, "&fGive &bString &f33%"));
     displayRecipes.add(new ItemStack(Material.STRING));
+    
+    // poisonous potato recipes for the virtual aquarium
+    displayRecipes.add(CustomItemStack.create(Material.POISONOUS_POTATO, null, "&fGive &aPufferfish &f5%"));
+    displayRecipes.add(new ItemStack(Material.PUFFERFISH));
+    
+    displayRecipes.add(CustomItemStack.create(Material.POISONOUS_POTATO, null, "&fGive &bNautilus &f5%"));
+    displayRecipes.add(new ItemStack(Material.NAUTILUS_SHELL));
+    
+    displayRecipes.add(CustomItemStack.create(Material.POISONOUS_POTATO, null, "&fGive &bMoss &f15%"));
+    displayRecipes.add(new ItemStack(Material.MOSS_BLOCK));
+    
+    displayRecipes.add(CustomItemStack.create(Material.POISONOUS_POTATO, null, "&fGive &bGlow Berries &f11%"));
+    displayRecipes.add(new ItemStack(Material.GLOW_BERRIES));
+    
+    displayRecipes.add(CustomItemStack.create(Material.POISONOUS_POTATO, null, "&fGive &bOak Log &f25%"));
+    displayRecipes.add(new ItemStack(Material.OAK_LOG));
+    
+    // magnet fishing
+    displayRecipes.add(createMagnetDisplay(SlimefunItems.MAGNET.asOne(), "Copper Ingot", 50));
+    displayRecipes.add(new ItemStack(Material.COPPER_INGOT));
+    
+    displayRecipes.add(createMagnetDisplay(SlimefunItems.MAGNET.asOne(), "Mossy Cobblestone", 50));
+    displayRecipes.add(new ItemStack(Material.MOSSY_COBBLESTONE));
+
     return displayRecipes;
   }
 

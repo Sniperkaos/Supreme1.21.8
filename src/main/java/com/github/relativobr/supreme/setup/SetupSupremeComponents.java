@@ -1,9 +1,13 @@
 package com.github.relativobr.supreme.setup;
 
 import static com.github.relativobr.supreme.util.RegisterItem.registerEnhancedCraft;
+import static com.github.relativobr.supreme.util.RegisterItem.registerGrindStone;
 import static com.github.relativobr.supreme.util.RegisterItem.registerMagicalFabricator;
 import static com.github.relativobr.supreme.util.RegisterItem.registerNullRecipe;
 import static com.github.relativobr.supreme.util.RegisterItem.registerSmeltery;
+
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
 
 import com.github.relativobr.supreme.Supreme;
 import com.github.relativobr.supreme.resource.SupremeComponents;
@@ -28,6 +32,10 @@ public class SetupSupremeComponents {
 
     registerEnhancedCraft(SupremeComponents.ZIRCONIUM_PLATE, SupremeComponents.RECIPE_ZIRCONIUM_PLATE);
 
+    registerGrindStone(SupremeComponents.MOSS_BALL, new ItemStack[] {
+    		new ItemStack(Material.MOSSY_COBBLESTONE)
+    }, 1);
+    
     registerEnhancedCraft(SupremeComponents.TITANIUM_PLATE, SupremeComponents.RECIPE_TITANIUM_PLATE);
 
     registerEnhancedCraft(SupremeComponents.IRIDIUM_PLATE, SupremeComponents.RECIPE_IRIDIUM_PLATE);

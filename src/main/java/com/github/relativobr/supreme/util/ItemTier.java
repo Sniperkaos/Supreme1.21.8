@@ -17,33 +17,33 @@ import org.bukkit.inventory.ItemStack;
 public class ItemTier {
 
   public static ItemStack[] getMagicRecipe(SlimefunItemStack preItem) {
-    return new ItemStack[]{THORNIUM_BIT_SYNTHETIC.asOne(), preItem.asOne(), THORNIUM_BIT_SYNTHETIC.asOne(),
-        THORNIUM_BIT_SYNTHETIC.asOne(), CETRUS_IGNIS.asOne(), THORNIUM_BIT_SYNTHETIC.asOne(),
-				THORNIUM_BIT_SYNTHETIC.asOne(), preItem.asOne(), THORNIUM_BIT_SYNTHETIC.asOne()};
+    return new ItemStack[]{THORNIUM_BIT_SYNTHETIC.item(), preItem.item(), THORNIUM_BIT_SYNTHETIC.item(),
+        THORNIUM_BIT_SYNTHETIC.item(), CETRUS_IGNIS.item(), THORNIUM_BIT_SYNTHETIC.item(),
+				THORNIUM_BIT_SYNTHETIC.item(), preItem.item(), THORNIUM_BIT_SYNTHETIC.item()};
   }
 
   public static ItemStack[] getRareRecipe(SlimefunItemStack preItem) {
-    return new ItemStack[]{THORNIUM_DUST_SYNTHETIC.asOne(), preItem.asOne(), THORNIUM_DUST_SYNTHETIC.asOne(),
-				THORNIUM_DUST_SYNTHETIC.asOne(), CETRUS_VENTUS.asOne(), THORNIUM_DUST_SYNTHETIC.asOne(),
-        THORNIUM_DUST_SYNTHETIC.asOne(), preItem.asOne(), THORNIUM_DUST_SYNTHETIC.asOne()};
+    return new ItemStack[]{THORNIUM_DUST_SYNTHETIC.item(), preItem.item(), THORNIUM_DUST_SYNTHETIC.item(),
+				THORNIUM_DUST_SYNTHETIC.item(), CETRUS_VENTUS.item(), THORNIUM_DUST_SYNTHETIC.item(),
+        THORNIUM_DUST_SYNTHETIC.item(), preItem.item(), THORNIUM_DUST_SYNTHETIC.item()};
   }
 
   public static ItemStack[] getEpicRecipe(SlimefunItemStack preItem) {
-    return new ItemStack[]{THORNIUM_INGOT_SYNTHETIC.asOne(), preItem.asOne(), THORNIUM_INGOT_SYNTHETIC.asOne(),
-				THORNIUM_INGOT_SYNTHETIC.asOne(), CETRUS_LUX.asOne(), THORNIUM_INGOT_SYNTHETIC.asOne(),
-        THORNIUM_INGOT_SYNTHETIC.asOne(), preItem.asOne(), THORNIUM_INGOT_SYNTHETIC.asOne()};
+    return new ItemStack[]{THORNIUM_INGOT_SYNTHETIC.item(), preItem.item(), THORNIUM_INGOT_SYNTHETIC.item(),
+				THORNIUM_INGOT_SYNTHETIC.item(), CETRUS_LUX.item(), THORNIUM_INGOT_SYNTHETIC.item(),
+        THORNIUM_INGOT_SYNTHETIC.item(), preItem.item(), THORNIUM_INGOT_SYNTHETIC.item()};
   }
 
   public static ItemStack[] getLegendaryRecipe(SlimefunItemStack preItem) {
-    return new ItemStack[]{THORNIUM_CARBONADO.asOne(), preItem.asOne(), THORNIUM_CARBONADO.asOne(),
-        THORNIUM_CARBONADO.asOne(), CETRUS_LUMIUM.asOne(), THORNIUM_CARBONADO.asOne(),
-				THORNIUM_CARBONADO.asOne(), preItem.asOne(), THORNIUM_CARBONADO.asOne()};
+    return new ItemStack[]{THORNIUM_CARBONADO.item(), preItem.item(), THORNIUM_CARBONADO.item(),
+        THORNIUM_CARBONADO.item(), CETRUS_LUMIUM.item(), THORNIUM_CARBONADO.item(),
+				THORNIUM_CARBONADO.item(), preItem.item(), THORNIUM_CARBONADO.item()};
   }
 
   public static ItemStack[] getSupremeRecipe(SlimefunItemStack preItem) {
-    return new ItemStack[]{THORNIUM_ENERGIZED.asOne(), preItem.asOne(), THORNIUM_ENERGIZED.asOne(),
-        THORNIUM_ENERGIZED.asOne(), SUPREME.asOne(), THORNIUM_ENERGIZED.asOne(),
-        THORNIUM_ENERGIZED.asOne(), preItem.asOne(), THORNIUM_ENERGIZED.asOne()};
+    return new ItemStack[]{THORNIUM_ENERGIZED.item(), preItem.item(), THORNIUM_ENERGIZED.item(),
+        THORNIUM_ENERGIZED.item(), SUPREME.item(), THORNIUM_ENERGIZED.item(),
+        THORNIUM_ENERGIZED.item(), preItem.item(), THORNIUM_ENERGIZED.item()};
   }
 
 }
