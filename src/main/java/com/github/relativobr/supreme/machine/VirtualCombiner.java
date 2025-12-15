@@ -10,6 +10,7 @@ import java.util.Set;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
@@ -27,6 +28,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineTier;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineType;
+import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
@@ -50,7 +52,7 @@ public class VirtualCombiner extends GenericMachine {
 		}
 
 		public VirtualCombinerMachineRecipe(ItemStack output, ItemStack[] inputs) {
-			this(9600, inputs, new ItemStack[] {output});
+			this(200, inputs, new ItemStack[] {output});
 		}
 
 		private ItemStack makeDisplayItem(ItemStack item) {
@@ -93,7 +95,7 @@ public class VirtualCombiner extends GenericMachine {
 		new SupremeItemStack(
 			"SUPREME_VIRTUAL_COMBINER",
 			Material.PALE_MOSS_BLOCK,
-			"&bCombiner", "", "&fCombines items together", "",
+			"&bVirtual Combiner", "", "&fCombines items together", "",
 			LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(10),
 			UtilEnergy.energyPowerPerSecond(1000), "", "&3Supreme Machine"
 		);
@@ -102,7 +104,7 @@ public class VirtualCombiner extends GenericMachine {
 			new SupremeItemStack(
 				"SUPREME_VIRTUAL_COMBINER_II",
 				Material.PALE_MOSS_BLOCK,
-				"&bCombiner II", "", "&fCombines items together", "",
+				"&bVirtual Combiner II", "", "&fCombines items together", "",
 				LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(20),
 				UtilEnergy.energyPowerPerSecond(10000), "", "&3Supreme Machine"
 			);
@@ -111,7 +113,7 @@ public class VirtualCombiner extends GenericMachine {
 			new SupremeItemStack(
 				"SUPREME_VIRTUAL_COMBINER_III",
 				Material.PALE_MOSS_BLOCK,
-				"&bCombiner III", "", "&fCombines items together", "",
+				"&bVirtual Combiner III", "", "&fCombines items together", "",
 				LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(40),
 				UtilEnergy.energyPowerPerSecond(35000), "", "&3Supreme Machine"
 			);
@@ -141,6 +143,18 @@ public class VirtualCombiner extends GenericMachine {
 	
 	public VirtualCombiner(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
 		super(category, item, recipeType, recipe);
+		addItemHandler(new BlockBreakHandler(false, false) {
+			@Override
+			public void onPlayerBreak(BlockBreakEvent e, ItemStack item, List<ItemStack> drops) {
+				Block b = e.getBlock();
+				if(progress.containsKey(b)) {
+					progress.remove(b);
+				}
+				if(processing.containsKey(b)) {
+					processing.remove(b);
+				}
+			}
+		});
 	}
 	
 	public void addRecipe(VirtualCombinerMachineRecipe recipe) {
@@ -285,15 +299,16 @@ public class VirtualCombiner extends GenericMachine {
 				  updateStatusOutputFull(menu);
 				  return;
 			  }
+			  
 			  if(getCharge(b.getLocation()) < getEnergyConsumption()) {
 			        updateStatusConnectEnergy(menu, recipeOutput);
 			  }
 			  
 			  if(takeCharge(b.getLocation())) {
 				  int timeLeft = progress.get(b);
-				  if(timeLeft > 0) {
-					  ChestMenuUtils.updateProgressbar(menu, getStatusSlot(), timeLeft, processing.get(b).getTicks(), getProgressBar());
-					  int time = Math.max(timeLeft - getSpeed(), 0);
+				  if((processing.get(b).getTicks() - timeLeft) > 0) {
+					  ChestMenuUtils.updateProgressbar(menu, getStatusSlot(), processing.get(b).getTicks() - timeLeft, processing.get(b).getTicks(), getProgressBar());
+					  int time = Math.min(timeLeft + getSpeed(), processing.get(b).getTicks());
 					  progress.put(b, time);
 				  } else {
 					  menu.pushItem(recipeOutput.clone(), getOutputSlots());
