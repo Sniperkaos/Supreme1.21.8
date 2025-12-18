@@ -136,9 +136,9 @@ public class VirtualCombiner extends GenericMachine {
 			SupremeComponents.SUPREME.item(), SupremeAttribute.ATTRIBUTE_BOMB.item(), SupremeComponents.SUPREME.item()
 	};
 	
-	  public static Map<Block, MachineRecipe> processing = new HashMap<>();
-	  public static Map<Block, Integer> progress = new HashMap<>();
-	  private final Set<VirtualCombinerMachineRecipe> recipes = new HashSet<VirtualCombinerMachineRecipe>();
+	public static Map<Block, MachineRecipe> processing = new HashMap<>();
+	public static Map<Block, Integer> progress = new HashMap<>();
+	private final Set<VirtualCombinerMachineRecipe> recipes = new HashSet<VirtualCombinerMachineRecipe>();
 
 	
 	public VirtualCombiner(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
@@ -263,6 +263,10 @@ public class VirtualCombiner extends GenericMachine {
 	    addCombinerRecipe(new VirtualCombinerMachineRecipe(new ItemStack(Material.COBWEB, 1), new ItemStack[] {
 	    		new ItemStack(Material.STRING, 8),
 	    		SlimefunItems.DUCT_TAPE.asOne(),
+	    }));
+	    addCombinerRecipe(new VirtualCombinerMachineRecipe(new ItemStack(Material.POISONOUS_POTATO), new ItemStack[] {
+	    		new ItemStack(Material.POTATO),
+	    		SlimefunItems.MONSTER_JERKY.asOne()
 	    }));
 	  }
 	  

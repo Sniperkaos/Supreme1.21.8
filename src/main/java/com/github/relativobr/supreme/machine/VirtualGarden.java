@@ -24,6 +24,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import java.util.concurrent.ThreadLocalRandom;
+
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
@@ -85,7 +87,7 @@ public class VirtualGarden extends SimpleItemWithLargeContainerMachine {
     VirtualGardenMachineRecipe.getAllRecipe()
         .stream().filter(Objects::nonNull)
         .forEach(recipe -> {
-      this.addProduce(new VirtualGardenMachineRecipe(recipe));
+      addProduce(new VirtualGardenMachineRecipe(recipe));
     });
   }
 
@@ -178,6 +180,14 @@ public class VirtualGarden extends SimpleItemWithLargeContainerMachine {
         } else {
           for (ItemStack output : recipeOutput) {
             if(output != null){
+            	if(processing.get(b).getInput()[0].getType().equals(Material.POTATO)) {
+            		int random = ThreadLocalRandom.current().nextInt(100);
+            		if(random >= 90) {
+                        ItemStack clone = new ItemStack(Material.POISONOUS_POTATO, 1);
+                        inv.pushItem(clone, getOutputSlots());
+                        return;
+            		}
+            	}
               ItemStack clone = output.clone();
               clone.setAmount(1);
               inv.pushItem(clone, getOutputSlots());

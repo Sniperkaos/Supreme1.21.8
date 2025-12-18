@@ -37,6 +37,8 @@ import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.inventory.DirtyChestMenu;
 import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
+
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -93,11 +95,13 @@ public class GenericMachine extends AContainer implements NotHopperable, RecipeD
 
         for (int slot : getInputSlots()) {
           ItemStack stack = menu.getItemInSlot(slot);
+          if(!stack.hasItemMeta()) {
+        	  stack.setItemMeta(Bukkit.getItemFactory().getItemMeta(stack.getType()));
+          }
           if (stack != null && SlimefunUtils.isItemSimilar(stack, item, false, true)) {
             if (stack.getAmount() >= stack.getMaxStackSize()) {
               fullSlots++;
             }
-
             slots.add(slot);
           }
         }
