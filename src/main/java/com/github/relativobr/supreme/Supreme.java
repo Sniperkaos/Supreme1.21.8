@@ -10,12 +10,19 @@ import com.github.relativobr.supreme.setup.MainSetup;
 import com.github.relativobr.supreme.util.CompatibilySupremeLegacyItem;
 import com.github.relativobr.supreme.util.SupremeOptions;
 import com.github.relativobr.supreme.util.SupremePowerSection;
+
+import dev.cworldstar.extreme.Extreme;
+import dev.cworldstar.protocol.ItemEditorProtocol;
+import dev.cworldstar.protocol.ItemNameLerpPassthrough;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.BlobBuildUpdater;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
+
+import org.bukkit.Bukkit;
+import org.bukkit.NamespacedKey;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -29,6 +36,10 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
 
   public static Supreme inst() {
     return instance;
+  }
+  
+  public static NamespacedKey key(String key) {
+	  return new NamespacedKey(inst(), key);
   }
 
   public static SupremeOptions getSupremeOptions() {
@@ -153,7 +164,7 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
     if (autoUpdate) {
       new BlobBuildUpdater(this, getFile(), "Supreme", "Dev").start();
     }
-
+   
     // localization
     Supreme.inst().log(Level.INFO, "Loaded language Supreme: " + getSupremeOptions().getLang());
     getLocalization();
@@ -167,7 +178,8 @@ public class Supreme extends JavaPlugin implements SlimefunAddon {
     }
 
     MainSetup.setup(this);
-
+    Extreme.tryEnable();
+    
   }
 
   @Override

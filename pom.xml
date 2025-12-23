@@ -34,6 +34,13 @@
     <dependencies>
 
         <dependency>
+            <groupId>com.github.GuizhanCraft</groupId>
+            <artifactId>InfinityExpansion2</artifactId>
+            <version>-3bfc52fbb5-1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
             <version>1.21.8-R0.1-SNAPSHOT</version>
@@ -66,6 +73,13 @@
             <artifactId>spring-context</artifactId>
             <version>6.1.10</version>
         </dependency>
+
+		<dependency>
+	      <groupId>com.github.dmulloy2</groupId>
+	      <artifactId>ProtocolLib</artifactId>
+	      <version>5.3.0</version>
+	      <scope>provided</scope>
+	    </dependency>
 
       <!-- translation plugin -->
         <dependency>
