@@ -114,6 +114,10 @@ public class ExtremeCraftingTable extends GenericMachine {
 		}
 		
 		public static ExtremeCraftingTableRecipe create(ItemStack[] input, SlimefunItemStack output, int amount) {
+			return create(input, output.item(), amount);
+		}
+		
+		public static ExtremeCraftingTableRecipe create(ItemStack[] input, ItemStack output, int amount) {
 			if(input.length < 25) {
 				throw new UnsupportedOperationException("An Extreme Crafting Recipe cannot be below 25 in length!");
 			}

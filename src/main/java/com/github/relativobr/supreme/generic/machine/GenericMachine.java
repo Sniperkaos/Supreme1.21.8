@@ -95,10 +95,11 @@ public class GenericMachine extends AContainer implements NotHopperable, RecipeD
 
         for (int slot : getInputSlots()) {
           ItemStack stack = menu.getItemInSlot(slot);
+          if(stack == null) continue;
           if(!stack.hasItemMeta()) {
         	  stack.setItemMeta(Bukkit.getItemFactory().getItemMeta(stack.getType()));
           }
-          if (stack != null && SlimefunUtils.isItemSimilar(stack, item, false, true)) {
+          if (SlimefunUtils.isItemSimilar(stack, item, false, true)) {
             if (stack.getAmount() >= stack.getMaxStackSize()) {
               fullSlots++;
             }
@@ -313,8 +314,8 @@ public class GenericMachine extends AContainer implements NotHopperable, RecipeD
     return processing.get(b);
   }
 
-  protected Map<ItemStack, Integer> getConsumedItems(Block b) {
-    return consumedItemsMap.get(b);
+  protected @Nonnull Map<ItemStack, Integer> getConsumedItems(Block b) {
+    return consumedItemsMap.getOrDefault(b, new HashMap<>());
   }
 
   protected boolean isProcessing(Block b) {
